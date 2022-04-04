@@ -1,0 +1,47 @@
+nav {
+  border: solid green;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+#duck {
+  display: flex;
+}
+
+#duck > div.duck > a > img {
+  width: 100px;
+  height: 100px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.grid-container {
+  border: solid blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.grid-item {
+  border: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
