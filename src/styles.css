@@ -1,12 +1,91 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url("../assets/fonts/Quicksand/static/Quicksand-Light.ttf")
+    format("truetype");
+  src: url("../assets/fonts/Quicksand/static/Quicksand-Regular.ttf")
+    format("truetype");
+  src: url("../assets/fonts/Quicksand/static/Quicksand-Medium.ttf")
+    format("truetype");
+  src: url("../assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf")
+    format("truetype");
+  src: url("../assets/fonts/Quicksand/static/Quicksand-Bold.ttf")
+    format("truetype");
+}
+
+* {
+  font-family: "Quicksand";
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  /*animation-name - animation-duration - animation-delay animation-iteration-count */
+  animation: unblur 3s 1s 2;
+}
+
+/*Keyframe definition 
+  This custom keyframe rule named “unblur” will change the appearance of a text: 
+  it will start with a text-shadow and will end with no text-shadow.
+  This is the custom animation that we will use inside the animation property */
+@keyframes unblur {
+  from {
+    text-shadow: 0 0 8px #c0c0c0;
+  }
+  to {
+    text-shadow: 0;
+  }
+}
+
+section {
+  color: #c0c0c0;
+  /*here we define what properties the transition should apply (background-colo, color
+and font-size*/
+  transition-property: background-color color font-size;
+  /* here we define how long our transition should last*/
+  transition-duration: 2s;
+  /* here we say that our transition should start0,5 seconds after the trigger*/
+  transition-delay: 0s;
+}
+
+/* here we define how our transition properties will change on hover*/
+section:hover {
+  color: #eaea7f;
+  font-size: 1.6rem;
+  background-color: #f24a72;
+}
+
 nav {
-  border: solid green;
+  background-color: #333c83;
+  color: #eaea7f;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
+}
+
+body > nav > div.nav-right > ul > li > a {
+  color: #eaea7f;
+}
+
+body > * {
+  margin: 0px 0px 40px 0px;
+}
+
+a:hover {
+  border: #fdaf75 solid 1px;
+}
+
+a:active {
+  color: #fdaf75;
 }
 
 ul {
   display: flex;
   justify-content: space-between;
+  list-style-type: none;
+}
+
+ul > li {
+  margin: 4px;
 }
 
 .nav-left {
@@ -16,6 +95,11 @@ ul {
 
 #duck {
   display: flex;
+}
+
+#duck > div.text > h2 {
+  text-transform: capitalize;
+  text-shadow: 10px;
 }
 
 #duck > div.duck > a > img {
@@ -30,18 +114,58 @@ footer {
 }
 
 .grid-container {
-  border: solid blue;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 3px;
+  grid-gap: 0px;
   width: 80%;
   margin: 0 auto;
 }
 
 .grid-item {
-  border: solid;
+  border: solid gray 0.5px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 150px;
+}
+#emergency > div > a:nth-child(1) > div {
+  border-left: unset;
+  border-top: unset;
+}
+
+#emergency > div > a:nth-child(2) > div {
+  border-top: unset;
+}
+
+#emergency > div > a:nth-child(3) > div {
+  border-right: unset;
+  border-top: unset;
+}
+
+#emergency > div > a:nth-child(4) > div {
+  border-left: unset;
+  border-bottom: unset;
+}
+
+#emergency > div > a:nth-child(5) > div {
+  border-bottom: unset;
+}
+
+#emergency > div > a:nth-child(6) > div {
+  border-right: unset;
+  border-bottom: unset;
+}
+
+#emergency > div > a {
+  color: #333c83;
+}
+
+#contact > *:not(button) {
+  background-color: #333c83;
+  color: #eaea7f;
+}
+
+#contact > button:focus,
+#contact > button:hover {
+  background-color: #f24a72;
 }
